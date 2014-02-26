@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%
+%% WebRTC Introduction
+
+Title: WebRTC Introduction
+Author: Victor Klos & Eelco Cramer
+
+
+WebRTC Introduction
+===================
+
+* What is WebRTC?
+
+* What is WebRTC not?
+
+* Where is WebRTC standardized?
+
+* What about interoperability?
+
+What is WebRTC?
+===============
+
+WebRTC is peer-to-peer communication in the browser.
+
+* Protocol suite for transport.
+
+* Javascript APIs for control.
+
+What is WebRTC not?
+===================
+
+WebRTC is not an application!
+
+Standardization
+===============
+
+* The protocol suite is standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
+
+* The JavaScript API is standardized by the [W3C] *Web Real-Time Communications Working Group*.
+
+[IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
+[W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
+
+Interoperability?
+=================
+
+Firefox & Chrome are *sort of* interoperable since May 2013.
+
+* There are API differences.
+
+* There are differences in implementation progress: check [iswebrtcreadyyet.com]
+
+[iswebrtcreadyyet.com]: http://iswebrtcreadyyet.com/
