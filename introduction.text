@@ -4,6 +4,13 @@
 Title: WebRTC Introduction
 Author: Victor Klos & Eelco Cramer
 
+Introduction to WebRTC
+======================
+
+<br/>
+
+<img src="figures/webrtc-logo.png" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
+
 Why is WebRTC cool?
 ===================
 
@@ -127,7 +134,7 @@ Browsers
 Browser reach is almost 50%!
 ============================
 
-![ Browser gebruik ](figures/browsergebruik-okt-2013-nl.gif "Browser gebruik")
+<img src="figures/browsergebruik-okt-2013-nl.gif" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
 
 Platforms
 =========
