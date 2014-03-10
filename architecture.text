@@ -8,11 +8,112 @@ Author: Victor Klos & Eelco Cramer
 WebRTC Architecture
 ===================
 
-We will be looking at
+We will be looking at:
 
-* Security
-* Network Connectivity
-* Protocols
+* Networking
+* Codecs
+
+
+Networking
+==========
+
+![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+
+
+A client connects
+=================
+
+![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+
+
+Two clients connect
+===================
+
+![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+
+
+In the home network
+===================
+
+![ Home Networking ](figures/home%20network.svg "Home Networking")
+
+
+Client connects to server
+=========================
+
+![ Home Networking ](figures/home%20network.svg "Home Networking")
+
+
+The gateway performs NAT
+========================
+
+![ Home Networking ](figures/home%20network.svg "Home Networking")
+
+
+And keeps administration up-to-date
+===================================
+
+![ Home Networking ](figures/home%20network.svg "Home Networking")
+
+
+Peer-to-peer won't work
+=======================
+
+![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+
+
+STUN to the rescue
+==================
+
+[STUN][] - Session Traversal Utilities for NAT
+
+<br/>
+
+Have an external server answer the questions:
+
+* "What is my external IP?"
+* "What is my external port?"
+
+<br/>
+
+```javascript
+var ice = {"iceServers": [
+    {"url": "stun:23.21.150.121"},
+    {"url": "stun:stun.l.google.com:19302"},
+]};
+```
+
+
+Sometimes it just doesn't work
+==============================
+
+Then use [TURN][] - Traversal Using Relays around NAT
+
+&rArr; Traffic is **relayed**, no longer P2P!
+
+<br/>
+
+```javascript
+var ice = {"iceServers": [
+    {"url": "stun:23.21.150.121"},
+    {"url": "stun:stun.l.google.com:19302"},
+    {"url": "turn:user@turnserver.com", "account": "********"}
+]};
+```
+
+WebRTC simplifies with ICE
+==========================
+
+[ICE][] - Interactive Connectivity Establishment
+
+<br/>
+
+Finds a `PeerConnection` for you
+
+* on the local network
+* using STUN
+* using TURN
+
 
 Security
 ========
@@ -26,141 +127,37 @@ W3C WebRTC working group requires all transmissions to be **encrypted**
 For UDP media traffic solutions are available, e.g. [SRTP][]. For
 _connection-oriented_ traffic, [DTLS][] was invented.
 
-[SRTP]: https://www.ietf.org/rfc/rfc3711.txt "Secure RealTime Protocol"
-[DTLS]: https://www.ietf.org/rfc/rfc4347.txt "Datagram Transport Layer Security"
 
-
-Network Connectivity
-====================
-
-### What? 
-
-A Free Web Alternative to PowerPoint and KeyNote in Ruby
-
-![ Overview ](drawing.svg "Architecture overview")
-
-### Getting Started in 1-2-3 Easy Steps
-
-* Step 1: Author your slides in plain text using a wiki-style markup language
-* Step 2: Generate your slide show using the `slideshow` gem
-* Step 3: Open up your slide show in your browser and hit the space bar to flip through your slides
-* That's it. Showtime!
-
-
-Wiki-Style Markup Language - Markdown
-=====================================
-
-Lets you create slide shows and author slides in plain text
-using a wiki-style markup language that's easy-to-write and easy-to-read.
-Sample:
-
-```javascript
-var pc = tralala;
-```
-
-
-How it works - Just press F11!
-==============================
-
-The Slide Show (S9) Ruby gem turns your slides in plain text into a web page 
-that's an all-in-one-page handout and a live slide show all at once.
-
-
-    $ slideshow tutorial
-    
-    => Preparing slide show 'tutorial.html'...
-    => Done.
-
-
-Turn your web page into a slide show and your browser into full screen projection
-with a single push button (F11).  Hit the space bar or the right arrow, down arrow
-or page down key to flip through your slides.
-
-That's all. It's that simple.
-
-
-Slide Show (S9) Template Pack Options
+TCP versus UDP
 =====================================
 
 {% left %}
 
-### What's S5?
+### TCP
 
-Simple Standards-based Slide Show System (S5) -Eric Meyer's (of CSS fame) public domain (free, open source) slide show package inspired by Opera Show and others
-that works in all modern browsers (without any plugin required
-because it includes its own slide show machinery in JavaScript).
-
-(Use the `s5blank` or `s5themes` template pack to create S5 slide shows.)
+* Connection oriented
+* with ordering
+* and retransmissions
+* and congestion control
 
 {% end %}
 
 {% right %}
 
-### What's S6?
+### UDP
 
-S6 started as a rewrite of Eric Meyer's S5 using the jQuery JavaScript library -- offering easier to understand and easier to extend code. Add plugins, effects and more. Contributions welcome!
-
-(Use the `s6blank` or `s6syntax` template pack to create S6 slide shows.)
+* Connection-less
+* without ordering
+* without retransmissions
+* no congestion control
+* Fire-and-forget
 
 {% end %}
 
-### What's Slidy? What's Slippy? What's Google HTML5 Slides? 
-
-Check the [Slide Show Template Gallery](http://slideshow.rubyforge.org/templates.html)
-for more template packs and samples.
 
 
-
-Gradient Themes Using "Loss-Free" Vector Graphics in S9
-=======================================================
-
-### CSS3 Background Gradients 
-
-Using modern browser such as Firefox (3.6+), Chrome and Safari you can
-now theme your slide shows using using "loss-free" vector
-graphics in plain old CSS. Thanks to gradient support in backgrounds in CSS3.
-
-For example, the linear gradient from top to bottom with four color is defined
-in CSS3 as:
-
-```
-.gradient_yellow_orange {
-  
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%,
-                 from(yellow), to(orange),
-                 color-stop(0.33,orange), color-stop(0.66,yellow));
-  
-  background: -moz-linear-gradient(top, yellow, orange, yellow, orange);
-}
-```
-
-Using Slide Show (S9) you can use the `gradient` helper that
-generates the CSS3 for you:
-
-```
-{{{{ gradient yellow orange yellow orange }}
-```
-
-
-Turn Your Online Wiki Pages into Slide Shows - Sputnik Case Study
-=================================================================
-
-Inspired by the Slide Show (S9) Ruby gem - Yuri Takhteyev has
-added S9-style slide shows
-to [Sputnik](http://sputnik.freewisdom.org/en/Slideshow_Demo) - a wiki in Lua.
-
-Lets you author slide shows online in your browser.
-It's - surprise, surpise - a wiki and, thus, lets you
- work togther with others on a slide show, 
-track changes and versions, link and get linked, and much much more.
-
-
-Thanks - Learn More - Questions? Comments?
-==========================================
-
-Gerald Bauer designed and developed the Slide Show (S9) Ruby gem. 
-Find out more @ [`slideshow.rubyforge.org`](http://slideshow.rubyforge.org)
-
-Questions? Comments? Send them along
-to the [Free Web Slide Show Alternatives - S5, S6, S9 And Friends - Forum/Mailing List](http://groups.google.com/group/webslideshow).
-Thanks!
+[SRTP]: https://www.ietf.org/rfc/rfc3711.txt "Secure RealTime Protocol"
+[DTLS]: https://www.ietf.org/rfc/rfc4347.txt "Datagram Transport Layer Security"
+[STUN]: https://www.ietf.org/rfc/rfc5389.txt "Session Traversal Utilities for NAT"
+[TURN]: https://www.ietf.org/rfc/rfc5766.txt "Traversal Using Relays around NAT"
+[ICE]:  https://www.ietf.org/rfc/rfc5245.txt "Interactive Connectivity Establishment"
