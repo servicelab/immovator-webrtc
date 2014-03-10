@@ -648,7 +648,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.152325"
-     inkscape:cx="493.7843"
+     inkscape:cx="525.8933"
      inkscape:cy="191.96832"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -670,7 +670,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -733,7 +733,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Traffic left"
-     style="display:inline"
+     style="display:none"
      transform="translate(-41.527388,-143.98994)">
     <path
        style="opacity:0.8;color:#000000;fill:none;stroke:#008000;stroke-width:9.39999962;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -760,7 +760,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Traffic right"
-     style="display:inline"
+     style="display:none"
      transform="translate(5.0000024,-50.99958)">
     <path
        style="opacity:0.8;color:#000000;fill:none;stroke:#008000;stroke-width:9.39999962;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -785,7 +785,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="NAT admin"
-     style="display:inline">
+     style="display:none">
     <text
        transform="translate(5.0000024,-50.99958)"
        xml:space="preserve"
@@ -800,7 +800,7 @@
          y="424.53973"
          style="font-size:28px">NAT administration</tspan></text>
     <path
-       style="opacity:0.80000000000000004;color:#000000;fill:none;stroke:#001480;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.2,2.1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:0.8;color:#000000;fill:none;stroke:#001480;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.2, 2.1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 564.44124,243.49562 c 0,0 -7.61646,21.07171 -11.43586,44.92658 -3.8194,23.85487 -0.81685,39.20865 -0.81685,39.20865"
        id="path10371"
        inkscape:connector-curvature="0"
