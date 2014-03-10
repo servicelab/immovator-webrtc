@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%
+%% WebRTC Advanced Topics
+
+Title: WebRTC Advanced Topics
+Author: Victor Klos & Eelco Cramer
+
+
+WebRTC Advanced Topics
+======================
+
+* Peer-to-peer CDN
+
+
+Peer-to-peer CDN
+================
+
+A [CDN][] where the bandwidth cost is moved to clients, powered by WebRTC.
+
+<br/>
+
+Examples are:
+
+* https://peercdn.com/ (joined Yahoo, demo offline)
+* ...
+
+<br/>
+
+What kind of benefits are we looking at? Let's find out with a simulation...
+
+Case Journaal
+=============
+
+* duration 20 minutes
+* relevant for about 4 hours
+* draws 6000 visitors
+* following a Beta-distribution
+* encoding at 2Mbit/s
+
+{% left %}
+<img src="figures/beta-distribution.jpg" width="90%" />
+{% end %}
+{% right %}
+<img src="figures/journaal.jpg" width="80%" />
+{% end %}
+
+
+Assumptions
+===========
+
+Clients have a browser as per NL market Oct 2013:
+
+<img src="figures/browsergebruik-okt-2013-nl.gif" width="60%" />
+
+Each client:
+
+* caches 3 blocks
+* can serve 1 peer
+
+
+Sim of P2P Journaal traffic
+===========================
+
+<img src="figures/sim_journaal_normal.svg" width="90%" />
+
+
+
+
+[IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
+[W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
+[CDN]: https://en.wikipedia.org/wiki/Content_delivery_network "Content Delivery Network"
+
