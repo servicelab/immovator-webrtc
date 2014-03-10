@@ -4,12 +4,13 @@
 Title: WebRTC Introduction
 Author: Victor Klos & Eelco Cramer
 
-Introduction to WebRTC
-======================
+Introduction to
+===============
 
 <br/>
 
 <img src="figures/webrtc-logo.png" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
+
 
 Why is WebRTC cool?
 ===================
@@ -32,6 +33,7 @@ function gotRemoteStream(e){
 
 * Without browser plugins!
 
+
 WebRTC Cookbook
 ===============
 
@@ -47,14 +49,16 @@ WebRTC Cookbook
 
 * Enjoy your session.
 
+
 What is WebRTC?
 ===============
 
 WebRTC is peer-to-peer multi-media communication for the browser.
 
+* Javascript APIs for control.
+
 * Protocol suite for transport.
 
-* Javascript APIs for control.
 
 Standardization
 ===============
@@ -66,25 +70,28 @@ Standardization
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
 [W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
 
+
 What is WebRTC not?
 ===================
 
 * WebRTC is not an application!
 
 * WebRTC does not provide signalling:
-	- The signalling pane is the responsibility of the application developer.
-	- SIP, XMPP, socket.io, propiertary; all are viable options (demo).
+	- is left as responsibility of application developer.
+	- viable options include SIP, XMPP, socket.io, websockets and proprietary
+
 
 Components
 ==========
 
-The major WebRTC components are:
+The major WebRTC APIs are:
 
 * [getUserMedia](http://idevelop.ro/ascii-camera/)
 
 * [PeerConnection](https://webrtc-mp3-stream.herokuapp.com/)
 
 * DataChannel
+
 
 Media
 =====
@@ -95,15 +102,16 @@ Media
 
 * DTMF
 
-* Video?
-	- VP8 and / or H264?
+* Video
+
 
 Under discussion
 ================
 
-* The video codec discussion.
+* The video codec: VP8 and/or h264?
 
 * Use of SDP or alternatives.
+
 
 Uptake
 ======
@@ -113,6 +121,7 @@ Uptake
 * Platforms
 
 * Market
+
 
 Browsers
 ========
@@ -131,10 +140,12 @@ Browsers
 
 [iswebrtcreadyyet.com]: http://iswebrtcreadyyet.com/
 
+
 Browser reach is almost 50%!
 ============================
 
 <img src="figures/browsergebruik-okt-2013-nl.gif" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
+
 
 Platforms
 =========
@@ -150,6 +161,7 @@ Platforms
 	- Windows Mobile
 
 	- Firefox OS.
+
 
 Market
 ======
