@@ -60,12 +60,28 @@ Each client:
 * can serve 1 peer
 
 
-Sim of P2P Journaal traffic
+Simulated traffic
+=================
+
+<img src="figures/sim_journaal_lim_upstream_nl.svg" width="90%" />
+
+
+What if upstream increases?
 ===========================
 
-<img src="figures/sim_journaal_normal.svg" width="90%" />
+<img src="figures/sim_journaal_normal_nl.svg" width="90%" />
 
 
+Better compatibility?
+=====================
+
+<img src="figures/sim_journaal_lim_upstream_fut.svg" width="90%" />
+
+
+This time next year
+===================
+
+<img src="figures/sim_journaal_normal_fut.svg" width="90%" />
 
 
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
@@ -76,6 +92,7 @@ Demo
 ====
 
 Point your browser to: [demo.streamroot.io](http://demo.streamroot.io/)
+
 
 WebRTC Overlay Network
 ======================
