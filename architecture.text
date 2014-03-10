@@ -11,55 +11,86 @@ WebRTC Architecture
 We will be looking at:
 
 * Networking
-* Codecs
+* Protocol stack
+* Codec Negotiation
+* Case: Video Conferencing
 
 
 Networking
 ==========
 
-![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+![Internet Communications](figures/internet%20comms-0.svg "Internet communications")
 
 
 A client connects
 =================
 
-![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+![Internet Communications](figures/internet%20comms-1.svg "Internet communications")
 
 
-Two clients connect
-===================
+Second clients connects
+=======================
 
-![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+![Internet Communications](figures/internet%20comms-2.svg "Internet communications")
 
 
 In the home network
 ===================
 
-![ Home Networking ](figures/home%20network.svg "Home Networking")
+![Home Networking](figures/home%20network-0.svg "Home Networking")
 
 
 Client connects to server
 =========================
 
-![ Home Networking ](figures/home%20network.svg "Home Networking")
+![Home Networking](figures/home%20network-1.svg "Home Networking")
 
 
 The gateway performs NAT
 ========================
 
-![ Home Networking ](figures/home%20network.svg "Home Networking")
+![Home Networking](figures/home%20network-2.svg "Home Networking")
 
 
-And keeps administration up-to-date
-===================================
+And does housekeeping
+======================
 
-![ Home Networking ](figures/home%20network.svg "Home Networking")
+![Home Networking](figures/home%20network-3.svg "Home Networking")
 
 
-Peer-to-peer won't work
-=======================
+TCP versus UDP
+==============
 
-![ Internet Communications ](figures/internet%20comms.svg "Internet communications")
+{% left %}
+
+TCP
+
+* Connection oriented
+* with ordering
+* and retransmissions
+* and congestion control
+
+{% end %}
+
+{% right %}
+
+UDP
+
+* Connection-less
+* without ordering
+* without retransmissions
+* no congestion control
+
+<br/>
+&rArr; Fire-and-forget
+
+{% end %}
+
+
+Peer-to-peer TCP won't work
+===========================
+
+![Internet Communications](figures/internet%20comms-3.svg "Internet communications")
 
 
 STUN to the rescue
@@ -84,14 +115,20 @@ var ice = {"iceServers": [
 ```
 
 
-Sometimes it just doesn't work
-==============================
+Bad Luck
+========
+
+Sometimes a connection fails:
+
+* (company) firewall
+* WiFi without client interconnect
+* network topologies
+
+<br/>
 
 Then use [TURN][] - Traversal Using Relays around NAT
 
 &rArr; Traffic is **relayed**, no longer P2P!
-
-<br/>
 
 ```javascript
 var ice = {"iceServers": [
@@ -128,31 +165,50 @@ For UDP media traffic solutions are available, e.g. [SRTP][]. For
 _connection-oriented_ traffic, [DTLS][] was invented.
 
 
-TCP versus UDP
-=====================================
+WebRTC protocol stack
+=====================
 
-{% left %}
+![WebRTC Protocol Stack](figures/WebRTC%20protocol%20stack.png "WebRTC protocol stack")
 
-### TCP
+<smaller>Source: HPBN, Ilya Grigorik, ISBN 9781449344764</smaller>
 
-* Connection oriented
-* with ordering
-* and retransmissions
-* and congestion control
 
-{% end %}
+SDP
+===
+```
+Session description
+    v=  (protocol version number, currently only 0)
+    o=  (originator and session identifier : username, id, version number, network address)
+    s=  (session name : mandatory with at least one UTF-8-encoded character)
+    i=* (session title or short information)
+    u=* (URI of description)
+    e=* (zero or more email address with optional name of contacts)
+    p=* (zero or more phone number with optional name of contacts)
+    c=* (connection information—not required if included in all media)
+    b=* (zero or more bandwidth information lines)
+    One or more Time descriptions ("t=" and "r=" lines; see below)
+    z=* (time zone adjustments)
+    k=* (encryption key)
+    a=* (zero or more session attribute lines)
+    Zero or more Media descriptions (each one starting by an "m=" line; see below)
+```
 
-{% right %}
+SDP (cont)
+==========
+```
+Time description (mandatory)
+    t=  (time the session is active)
+    r=* (zero or more repeat times)
 
-### UDP
+Media description (if present)
+    m=  (media name and transport address)
+    i=* (media title or information field)
+    c=* (connection information — optional if included at session level)
+    b=* (zero or more bandwidth information lines)
+    k=* (encryption key)
+    a=* (zero or more media attribute lines — overriding the Session attribute lines)
 
-* Connection-less
-* without ordering
-* without retransmissions
-* no congestion control
-* Fire-and-forget
-
-{% end %}
+```
 
 
 
