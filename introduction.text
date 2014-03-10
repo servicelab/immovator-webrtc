@@ -4,35 +4,50 @@
 Title: WebRTC Introduction
 Author: Victor Klos & Eelco Cramer
 
-
-WebRTC Introduction
+Why is WebRTC cool?
 ===================
 
-* What is WebRTC?
+* Create real-time applications with just a few lines of JavaScript.
 
-* What is WebRTC not?
 
-* Where is WebRTC standardized?
+```javascript
+pc = new webkitRTCPeerConnection(servers);
+pc.onaddstream = gotRemoteStream;
+//...
+function gotRemoteStream(e){
+  vid.src = URL.createObjectURL(e.stream);
+}
+```
 
-* What about browser support?
+* Works cross-platform.
+
+* Save money on operations.
+
+* Without browser plugins!
+
+WebRTC Cookbook
+===============
+
+* Get access to (streaming) audio, video or other data.
+
+* Find out how people can connect to me on the Internet.
+
+* Find out about supported media formats and browser capabilities.
+
+* Exchange this information with peers.
+
+* Stream your audio, video and data.
+
+* Enjoy your session.
 
 What is WebRTC?
 ===============
 
-WebRTC is peer-to-peer communication in the browser.
+WebRTC is peer-to-peer multi-media communication for the browser.
 
 * Protocol suite for transport.
 
 * Javascript APIs for control.
-
-What is WebRTC not?
-===================
-
-* WebRTC is not an application!
-
-* WebRTC is signalling agnostic.
-	- The signalling pane is the responsibility of the application developer.
-	- SIP, XMPP, socket.io, propiertary; all are possible.
 
 Standardization
 ===============
@@ -44,16 +59,25 @@ Standardization
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
 [W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
 
+What is WebRTC not?
+===================
+
+* WebRTC is not an application!
+
+* WebRTC does not provide signalling:
+	- The signalling pane is the responsibility of the application developer.
+	- SIP, XMPP, socket.io, propiertary; all are viable options (demo).
+
 Components
 ==========
 
 The major WebRTC components are:
 
+* [getUserMedia](http://idevelop.ro/ascii-camera/)
+
+* [PeerConnection](https://webrtc-mp3-stream.herokuapp.com/)
+
 * DataChannel
-
-* PeerConnection
-
-* getUserMedia
 
 Media
 =====
@@ -70,23 +94,61 @@ Media
 Under discussion
 ================
 
-* Use of SDP or alternatives.
-
 * The video codec discussion.
 
-Browser support
-===============
+* Use of SDP or alternatives.
+
+Uptake
+======
+
+* Browsers
+
+* Platforms
+
+* Market
+
+Browsers
+========
 
 * Support in Firefox, Chrome and Opera.
 
-* No support in Internet Explorer and Safari.
+* No support yet in Internet Explorer and Safari.
  
 * Firefox & Chrome are *sort of* interoperable since May 2013.
 
-* API differences between browsers.
+* Minor API differences between browsers.
 
 * There are differences in implementation progress.
 
 * See also [iswebrtcreadyyet.com]
 
 [iswebrtcreadyyet.com]: http://iswebrtcreadyyet.com/
+
+Browser reach is almost 50%!
+============================
+
+![ Browser gebruik ](figures/browsergebruik-okt-2013-nl.gif "Browser gebruik")
+
+Platforms
+=========
+
+* Major PC platforms are supported (Windows, Mac OSX, Linux).
+
+* Mobile is fragmented:
+
+	- Android has support by Chrome and Firefox.
+
+	- iOS is not supported.
+
+	- Windows Mobile
+
+	- Firefox OS.
+
+Market
+======
+
+* [webrtcstats.com](http://webrtcstats.com/)
+
+
+
+
