@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%
+%% WebRTC Introduction
+
+Title: WebRTC Introduction
+Author: Victor Klos & Eelco Cramer
+
+
+WebRTC Introduction
+===================
+
+* What is WebRTC?
+
+* What is WebRTC not?
+
+* Where is WebRTC standardized?
+
+* What about browser support?
+
+What is WebRTC?
+===============
+
+WebRTC is peer-to-peer communication in the browser.
+
+* Protocol suite for transport.
+
+* Javascript APIs for control.
+
+What is WebRTC not?
+===================
+
+* WebRTC is not an application!
+
+* WebRTC is signalling agnostic.
+	- The signalling pane is the responsibility of the application developer.
+	- SIP, XMPP, socket.io, propiertary; all are possible.
+
+Standardization
+===============
+
+* The protocol suite is standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
+
+* The JavaScript API is standardized by the [W3C] *Web Real-Time Communications Working Group*.
+
+[IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
+[W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
+
+Components
+==========
+
+The major WebRTC components are:
+
+* DataChannel
+
+* PeerConnection
+
+* getUserMedia
+
+Media
+=====
+
+* Opus Audio Codec
+
+* PCMA/PCMU to control audio and video conferences
+
+* DTMF
+
+* Video?
+	- VP8 and / or H264?
+
+Under discussion
+================
+
+* Use of SDP or alternatives.
+
+* The video codec discussion.
+
+Browser support
+===============
+
+* Support in Firefox, Chrome and Opera.
+
+* No support in Internet Explorer and Safari.
+ 
+* Firefox & Chrome are *sort of* interoperable since May 2013.
+
+* API differences between browsers.
+
+* There are differences in implementation progress.
+
+* See also [iswebrtcreadyyet.com]
+
+[iswebrtcreadyyet.com]: http://iswebrtcreadyyet.com/
