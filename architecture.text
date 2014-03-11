@@ -224,6 +224,18 @@ SDP for WebRTC
 * http://webrtchacks.com/anatomy-webrtc-sdp/
 
 
+Case: Video Conferencing
+========================
+
+![Video Conferencing P2P](figures/video%20conf-0.svg "Video conferencing P2P")
+
+
+Using a media gateway
+=====================
+
+![Video conferencing through Media Gateway](figures/video%20conf-1.svg "Video conferencing through Media Gateway")
+
+
 [SRTP]: https://www.ietf.org/rfc/rfc3711.txt "Secure RealTime Protocol"
 [DTLS]: https://www.ietf.org/rfc/rfc4347.txt "Datagram Transport Layer Security"
 [STUN]: https://www.ietf.org/rfc/rfc5389.txt "Session Traversal Utilities for NAT"
