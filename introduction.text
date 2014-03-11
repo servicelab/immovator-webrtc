@@ -95,16 +95,19 @@ The major WebRTC APIs are:
 * DataChannel
 
 
-Media
-=====
+About the supported media
+=========================
 
-* Opus Audio Codec
+* The Opus Audio Codec.
 
-* PCMA/PCMU (scaling algorithms for audio sampling)
+* PCMA/PCMU (scaling algorithms for audio sampling).
 
-* DTMF
+* [DTMF](https://webrtc.googlecode.com/svn/trunk/samples/js/demos/html/dtmf1.html) ("press 1 for sales" phone menus).
+
+* Arbritary data.
 
 * Video ...
+
 
 
 Under discussion
@@ -112,7 +115,7 @@ Under discussion
 
 * The video codec: VP8 and/or h264?
 
-* Use of SDP or alternatives.
+* Use of SDP offer/answer or alternatives.
 
 
 Uptake
