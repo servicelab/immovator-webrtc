@@ -74,7 +74,9 @@ Standardization
 What is WebRTC not?
 ===================
 
-* WebRTC is not an application!
+* It is not an application!
+
+* It is not a network.
 
 * WebRTC does not provide signaling:
 	- is left as responsibility of application developer.
