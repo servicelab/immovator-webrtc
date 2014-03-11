@@ -109,24 +109,24 @@ Dynamic peer-to-peer game networks using WebRTC
 Massive Multi-player Online Game
 ================================
  
-* Dynamically scalable
+* Dynamically scalable.
 
-* (virtually) server-less (i.e. peer-to-peer)
+* (virtually) server-less (i.e. peer-to-peer).
 
-* In the browser
+* In the browser.
 
-* With WebRTC
+* With WebRTC.
 
 Research topics
 ===============
 
-* Scalability of WebRTC peer to peer
+* Scalability of WebRTC peer to peer.
 
-* Robustness: Recovery after unpredictable events
+* Robustness: Recovery after unpredictable events.
 
-* Bandwidth efficiency
+* Bandwidth efficiency.
 
-* Ease of Development (with a Proof of Concept)
+* Ease of Development (with a Proof of Concept).
 
 Results
 =======
