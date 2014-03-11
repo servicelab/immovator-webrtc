@@ -10,7 +10,7 @@ WebRTC Advanced Topics
 
 * Peer-to-peer CDN
 
-* WebRTC Overlay Network
+* Dynamic peer-to-peer game networks using WebRTC
 
 
 Peer-to-peer CDN
@@ -94,7 +94,43 @@ Demo
 Point your browser to: [demo.streamroot.io](http://demo.streamroot.io/)
 
 
-WebRTC Overlay Network
-======================
+Dynamic peer-to-peer game networks using WebRTC
+===============================================
 
-* [Demo](http://webrtc.jstfy.com/)
+10 weeks Bachelor project from TU Delft EWI conducted at TNO.
+
+* Jasper Abbink
+
+* Karens Grigorjancs
+
+* Joost Verdoorn
+
+
+Massive Multi-player Online Game
+================================
+ 
+* Dynamically scalable
+
+* (virtually) serverless (i.e. peer-to-peer)
+
+* In the browser
+
+* With WebRTC
+
+Research topics
+===============
+
+* Scalability of WebRTC peer to peer
+
+* Robustness: Recovery after unpredictable events
+
+* Bandwidth efficiency
+
+* Ease of Development (with a Proof of Concept)
+
+Results
+=======
+
+* Demo: [webrtc.jstfy.com](http://webrtc.jstfy.com/)
+
+* [Bachalor Thesis](http://repository.tudelft.nl/assets/uuid:04082eb3-bb8c-4077-9ec2-0855da97a645/final_report_webrtc.pdf)
