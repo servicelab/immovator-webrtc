@@ -57,7 +57,7 @@ WebRTC is peer-to-peer multi-media communication for the browser.
 
 * Javascript APIs for control.
 
-* Protocol suite and infrastructure components for networking.
+* Protocols and infrastructure components for networking.
 
 
 Standardization
@@ -65,7 +65,7 @@ Standardization
 
 * The JavaScript API is standardized by the [W3C] *Web Real-Time Communications Working Group*.
 
-* The protocol suite and infrastructure components are standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
+* The protocols and infrastructure components are standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
 
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
 [W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
