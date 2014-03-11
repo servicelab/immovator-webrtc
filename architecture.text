@@ -173,8 +173,8 @@ WebRTC protocol stack
 <smaller>Source: HPBN, Ilya Grigorik, ISBN 9781449344764</smaller>
 
 
-[SDP][]
-=======
+SDP
+===
 ```
 Session description
     v=  (protocol version number, currently only 0)
@@ -193,9 +193,8 @@ Session description
     Zero or more Media descriptions (each one starting by an "m=" line; see below)
 ```
 
-
-SDP (cont'd)
-============
+SDP (cont)
+==========
 ```
 Time description (mandatory)
     t=  (time the session is active)
@@ -211,17 +210,6 @@ Media description (if present)
 
 ```
 
-
-SDP for WebRTC
-==============
-
-&rArr; Includes ICE candidates
-
-<br/>
-
-* https://www.ietf.org/rfc/rfc4566.txt (SDP)
-* http://tools.ietf.org/html/draft-nandakumar-rtcweb-sdp
-* http://webrtchacks.com/anatomy-webrtc-sdp/
 
 
 Case: Video Conferencing
@@ -241,4 +229,3 @@ Using a media gateway
 [STUN]: https://www.ietf.org/rfc/rfc5389.txt "Session Traversal Utilities for NAT"
 [TURN]: https://www.ietf.org/rfc/rfc5766.txt "Traversal Using Relays around NAT"
 [ICE]:  https://www.ietf.org/rfc/rfc5245.txt "Interactive Connectivity Establishment"
-[SDP]:  https://www.ietf.org/rfc/rfc4566.txt "Session Description Protocol"

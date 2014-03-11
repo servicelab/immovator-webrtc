@@ -37,17 +37,17 @@ function gotRemoteStream(e){
 WebRTC Cookbook
 ===============
 
-* Get access to (streaming) audio, video or other data.
+1. Get access to (streaming) audio, video or other data.
 
-* Find out how people can connect to me on the Internet.
+2. Find out how people can connect to me on the Internet.
 
-* Find out about supported media formats and browser capabilities.
+3. Find out about supported media formats and browser capabilities.
 
-* Exchange this information with peers.
+4. Exchange this information with peers.
 
-* Stream your audio, video and data.
+5. Stream your audio, video and data.
 
-* Enjoy your session.
+6. Enjoy your session.
 
 
 What is WebRTC?
@@ -57,15 +57,15 @@ WebRTC is peer-to-peer multi-media communication for the browser.
 
 * Javascript APIs for control.
 
-* Protocol suite for transport.
+* Protocols and infrastructure components for networking.
 
 
 Standardization
 ===============
 
-* The protocol suite is standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
-
 * The JavaScript API is standardized by the [W3C] *Web Real-Time Communications Working Group*.
+
+* The protocols and infrastructure components are standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
 
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
 [W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
@@ -74,11 +74,13 @@ Standardization
 What is WebRTC not?
 ===================
 
-* WebRTC is not an application!
+* It is not an application!
 
-* WebRTC does not provide signalling:
+* It is not a network.
+
+* WebRTC does not provide signaling:
 	- is left as responsibility of application developer.
-	- viable options include SIP, XMPP, socket.io, websockets and proprietary
+	- viable options include SIP, [XMPP](https://xmpp.org/) and proprietary protocols based on, for example, [socket.io](http://socket.io/) or websockets.
 
 
 Components
@@ -93,16 +95,19 @@ The major WebRTC APIs are:
 * DataChannel
 
 
-Media
-=====
+About the supported media
+=========================
 
-* Opus Audio Codec
+* The Opus Audio Codec.
 
-* PCMA/PCMU to control audio and video conferences
+* PCMA/PCMU (scaling algorithms for audio sampling).
 
-* DTMF
+* [DTMF](https://webrtc.googlecode.com/svn/trunk/samples/js/demos/html/dtmf1.html) ("press 1 for sales" phone menus).
 
-* Video
+* Arbritary data.
+
+* Video ...
+
 
 
 Under discussion
@@ -110,7 +115,7 @@ Under discussion
 
 * The video codec: VP8 and/or h264?
 
-* Use of SDP or alternatives.
+* Use of SDP offer/answer or alternatives.
 
 
 Uptake
@@ -156,18 +161,32 @@ Platforms
 
 	- Android has support by Chrome and Firefox.
 
-	- iOS is not supported.
+	- iOS: only through native SDKs.
 
-	- Windows Mobile
+	- Windows Mobile: no support.
 
-	- Firefox OS.
-
-
-Market
-======
-
-* [webrtcstats.com](http://webrtcstats.com/)
+	- Firefox OS: no support yet.
 
 
+Market uptake
+=============
 
+* Lot of innovation:
+	
+	- Communication services.
+
+	- Content Delivery Networks.
+
+	- Gaming.
+
+	- Developer frameworks.
+
+* For stats and metrics checkout: [webrtcstats.com](http://webrtcstats.com/)
+
+Questions?
+==========
+
+Next up...
+
+- deep dive into the WebRTC architecture.
 
