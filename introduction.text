@@ -65,7 +65,7 @@ Standardization
 
 * The JavaScript API is standardized by the [W3C] *Web Real-Time Communications Working Group*.
 
-* The protocol suite and infrastucture components are standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
+* The protocol suite and infrastructure components are standardized by the [IETF] *Real-Time Communication in WEB-browsers Working Group*.
 
 [IETF]: https://tools.ietf.org/wg/rtcweb/ "IETF Real-Time Communication in WEB-browsers Working Group"
 [W3C]: http://www.w3.org/2011/04/webrtc/ "W3C Web Real-Time Communications Working Group"
@@ -76,7 +76,7 @@ What is WebRTC not?
 
 * WebRTC is not an application!
 
-* WebRTC does not provide signalling:
+* WebRTC does not provide signaling:
 	- is left as responsibility of application developer.
 	- viable options include SIP, [XMPP](https://xmpp.org/) and proprietary protocols based on, for example, [socket.io](http://socket.io/) or websockets.
 
