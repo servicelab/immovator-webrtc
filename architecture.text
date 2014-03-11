@@ -16,6 +16,35 @@ We will be looking at:
 * Case: Video Conferencing
 
 
+TCP versus UDP
+==============
+
+{% left %}
+
+TCP
+
+* Connection oriented
+* with ordering
+* and retransmissions
+* and congestion control
+
+{% end %}
+
+{% right %}
+
+UDP
+
+* Connection-less
+* without ordering
+* without retransmissions
+* no congestion control
+
+<br/>
+&rArr; Fire-and-forget
+
+{% end %}
+
+
 Networking
 ==========
 
@@ -56,35 +85,6 @@ And does housekeeping
 ======================
 
 ![Home Networking](figures/home%20network-3.svg "Home Networking")
-
-
-TCP versus UDP
-==============
-
-{% left %}
-
-TCP
-
-* Connection oriented
-* with ordering
-* and retransmissions
-* and congestion control
-
-{% end %}
-
-{% right %}
-
-UDP
-
-* Connection-less
-* without ordering
-* without retransmissions
-* no congestion control
-
-<br/>
-&rArr; Fire-and-forget
-
-{% end %}
 
 
 Peer-to-peer TCP won't work
