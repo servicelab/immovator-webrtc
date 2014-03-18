@@ -9,6 +9,6 @@ Immovator
 
 <img src="figures/webrtc-logo.png" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
 
-* [Introduction to WebRTC](introduction.html)
-* [WebRTC Architecture](architecture.html)
-* [Advanced topics](advanced.html)
+* <a href="introduction.html" target="_blank">Introduction to WebRTC</a>
+* <a href="architecture.html" target="_blank">WebRTC Architecture</a>
+* <a href="advanced.html" target="_blank">Advanced topics</a>
