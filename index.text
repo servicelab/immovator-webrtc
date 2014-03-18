@@ -1,0 +1,14 @@
+%%%%%%%%%%%%%%%%%%
+%% WebRTC Index page
+
+Title: WebRTC Index Page
+Author: Victor Klos & Eelco Cramer
+
+Immovator
+=========
+
+<img src="figures/webrtc-logo.png" style="border:0; display: block; margin-left: auto; margin-right: auto; box-shadow: none"/>
+
+* [Introduction to WebRTC](introduction.html)
+* [WebRTC Architecture](architecture.html)
+* [Advanced topics](advanced.html)
