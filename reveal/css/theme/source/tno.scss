@@ -1,0 +1,71 @@
+/**
+ * A TNO theme for reveal.js presentations.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+//@import url(https://fonts.googleapis.com/css?family=Franklin+Gothic+Heavy:400,700);
+//@import url(https://fonts.googleapis.com/css?family=Franklin+Gothic+Book:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Franklin Gothic Book',Arial,Helvetica,sans-serif;
+$mainColor: #000;
+$headingFont: 'Franklin Gothic Heavy',Arial,Helvetica,sans-serif;
+$headingColor: #649EC9;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #ed8000;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal h1 {
+    font-size: 1.77em;
+}
+
+.slides {
+    text-align: center;
+}
+
+#blocktop, #blockbanner, #blockcontent, #blockfooter
+{
+    margin                  : 0px 0px 0px 0px;
+    padding                 : 0px 0px 0px 0px;
+    width                   : 620px;
+    margin                  : 0px auto 0px auto;
+}
+
+#blocktop
+{
+    height                  : 30px;
+}
+
+#blockbanner-back
+{
+    width                   : 100%;
+    background-image        : url(header-bg.png);
+    background-repeat       : no-repeat;
+    background-position     : center bottom;
+}
+
+#blockbanner
+{
+    height                  : 40px;
+    background-image        : url(logo-TNO.gif);
+    background-repeat       : no-repeat;
+    background-position     : left;
+    min-width               : 250px; 
+    min-height              : 40px;   
+}
